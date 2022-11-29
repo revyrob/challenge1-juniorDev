@@ -1,0 +1,29 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+
+.btn {
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    background-color: $primary-accent;
+    color: white;
+    border-radius: 25px;
+    padding: 0.5rem;
+    border: none;
+    font-weight: 400;
+    height: 2.375rem;
+    width: 100%;
+    margin: 1rem 0;
+    &:hover{
+        background-color: $bgcolor-dark;
+        transition: .5s;
+    }
+    @include tablet {
+        padding: 0.5rem 1rem;
+        font-size: $body-medium;
+        // width: 100%;
+    }
+   
+}
+

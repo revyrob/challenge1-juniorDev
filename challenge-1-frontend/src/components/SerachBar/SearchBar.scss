@@ -1,0 +1,42 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+
+.searchBar {
+        display: flex;
+        height: 2.375rem;
+        width: 100%;
+        margin: 1rem 0;
+        border: 1px solid $secondary-light;
+        border-radius: 25px;
+        align-items: center;
+        justify-content: left;
+        padding-left: 1rem;
+        background-color: $primary-light;
+        @include tablet {
+            width: 100%;
+        }
+ 
+    &__icon {
+        padding-right: .5rem;
+    }
+    &__input {
+        outline: none; 
+        width:100%;
+        background-color: $primary-light;
+        @include tablet {
+            font-size: $body-medium;
+        }
+    }
+
+}
+input {
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: hidden;
+    color: $primary-dark;
+    &:focus {
+        outline: none; 
+    }
+}

@@ -1,0 +1,123 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.videoClip {
+    font-size: $body-medium;
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        border-bottom: 1px solid $secondary-light;
+        align-items: center;
+        padding: 1rem 1.5rem 0;
+        &:hover {
+            background-color:rgba(46, 102, 229, 0.07);
+        }
+        @include tablet {
+            padding: 1rem 2rem 0;
+        }
+        
+    }
+    &__location {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        color: $primary-accent;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        &:hover {
+            text-decoration: underline;
+            transition: .5s;
+        }
+    }
+    &__location img {
+        margin-left: .5rem;
+    }
+    &__title{
+        text-transform: uppercase;
+        color:$secondary-dark;
+        font-weight: bold;
+    }
+    &__name{
+        margin-bottom: 1rem;
+    }
+    &__info{
+        margin-bottom: 1rem;
+        width: 5rem;
+        text-align: left;
+        @include tablet {
+            width: 8rem;
+
+        }
+    }
+    &__icon--tablet {
+        display: flex;
+        text-align: right;
+    }
+    &__close {
+        position: absolute;
+        top: 10%;
+        right: 5%;
+    }
+    &__modal {
+      background-color:$primary-light;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-radius: 3px;
+      &--title {
+          font-size: $page-header-mobile;
+          line-height: 2.25rem;
+          margin-bottom: 1rem;
+          margin-top: 2.5rem;
+      }
+      &--text{
+          font-size: $body-large-mobile;
+          line-height: 1.625rem;
+      }
+      &--div{
+          padding-bottom: auto;
+          display: flex;
+          justify-content: space-between;
+          @include tablet {
+            width: 30%;
+            margin-left: auto;
+          }
+      }
+      &--btn {
+          display: flex;  
+          align-items: center;
+          justify-content: center;
+          border-radius: 25px;
+          padding: 0.5rem;
+          border: none;
+          font-weight: 600;
+          height: 2.375rem;
+          margin: 1rem 0;
+          
+          &--cancel {
+              width: 47%;
+              border: 1px solid $secondary-light;
+              background-color: $primary-light;
+              color: $primary-dark;
+              &:hover {
+                color: $primary-accent;
+                background-color: $primary-light;
+                transition: .5s;
+            }
+          }
+          &--delete {
+              width: 47%;
+              background-color: $sup-red;
+              color: $primary-light;
+              &:hover {
+                background-color: $bgcolor-dark;
+                transition: .5s;
+            }
+          }
+      }
+      
+  }
+
+
+}

@@ -1,0 +1,117 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.list {
+    margin: 5rem 1rem 0;
+    background-color: $primary-light;
+    padding-top: 3rem;
+    @include tablet {
+        padding: 2rem 0;
+        margin: 5rem 2rem 0;
+    }
+    @include desktop {
+        width: 1020px;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+    &__header {
+        padding: 0 1.5rem .5rem;
+       
+        @include tablet{
+            padding-left:2rem;
+            padding-right:2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+ 
+    }
+    &__btn {
+       
+        @include tablet {
+            width: 80%;
+           
+        }
+    }
+    &__btns {
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+            min-width: 50%;
+        }
+    }
+    &__title{
+        font-weight: $bold;
+        font-size: 28px; 
+        @include tablet {
+            font-size: 32px;
+        } 
+    }
+    &__tablet {
+        
+            display:contents;
+        
+    }
+   
+    &__subtitle {
+        font-size: 0.6875rem;
+        text-transform: uppercase;
+        color:$secondary-dark;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        width: 5rem;
+
+        @include tablet{
+            font-size: 0.75rem;
+            width: 8rem;
+            display: flex;
+            justify-content: left;
+        }
+        &--icon {
+            @include tablet {
+                height: 1rem;
+                padding-left: .2rem;
+            }
+        }
+   
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        padding: 0 1.5rem;
+        
+        @include tablet {
+            padding: 0 2rem;
+        }
+}
+a:link {
+    text-decoration: none;
+  }
+  
+  a:visited {
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }
+  
+  a:active {
+    text-decoration: none;
+  }
+        
+    
+    
+}
+.align-right {
+    justify-content: right;
+}
+
+.indent {
+    margin-right: 2rem;
+}
